@@ -1,2 +1,14 @@
-- @curriculo.each do |curriculo|
-    %h2= link_to curriculo.nome, curriculo
+-#- @curriculo.each do |curriculo|
+-#   = link_to curriculo do
+-#        = image_tag curriculo.foto.url(:medium)
+-#    %h2= link_to curriculo.nome, curriculo
+
+- @curriculo.each_slice(3) do |curriculos|
+    .row
+        - curriculos.each do |curriculo|
+            .col-md-4
+                .recipe
+                    .image_wrapper
+                        = link_to curriculo do
+                            = image_tag curriculo.foto.url(:medium)
+                    %h2= link_to curriculo.nome, curriculo
