@@ -1,0 +1,14 @@
+= simple_form_for @curriculo, html: {multipart: true} do |f|
+    - if @curriculo.errors.any?
+        %p
+            = @curriculo.errors.count
+            Previne que este currículo seja salvo
+            %ul
+            - @recipe.errors.full_messages.each do |msg|
+                %li= msg
+
+    .panel-body
+        = f.input :nome, input_html: { class: 'form-control' }
+        = f.input :email, input_html: { class: 'form-control' }
+
+    = f.button :submit, class: "btn btn-primary"
