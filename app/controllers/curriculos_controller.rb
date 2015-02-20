@@ -1,5 +1,7 @@
 class CurriculosController < ApplicationController
     before_action :find_curriculo, only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_user!, except: [:index]
+
     def index
         @curriculo = Curriculo.all.order("nome DESC")
     end
