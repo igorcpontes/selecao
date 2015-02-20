@@ -85,7 +85,7 @@ color: $red;
 #recipe_top {
 margin-bottom: 50px;
 }
-#recipe_info, #ingredients, #directions {
+#recipe_info, #experiencias, #directions {
 background: white;
 @include box-shadow;
 min-height: 360px;
@@ -108,7 +108,7 @@ color: #8A8A8A;
 font-size: 20px;
 }
 }
-#ingredients, #directions {
+#experiencias, #directions {
 margin-bottom: 50px;
 ul, ol {
 padding-left: 18px;
