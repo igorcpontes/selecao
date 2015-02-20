@@ -40,7 +40,7 @@ class CurriculosController < ApplicationController
     private
 
     def curriculo_params
-        params.require(:curriculo).permit(:nome, :email, :foto, escolaridades_attributes:[:id, :instituicao, :_destroy], experiencias_attributes:[:id, :empresa, :tempo, :_destroy])
+        params.require(:curriculo).permit(:nome, :email, :foto, experiencias_attributes:[:id, :empresa, :tempo, :_destroy])
     end
 
     def find_curriculo

@@ -1,11 +1,7 @@
 class Curriculo < ActiveRecord::Base
 
-    has_many :escolaridades
     has_many :experiencias
 
-    accepts_nested_attributes_for :escolaridades,
-                                                    reject_if: proc { |attributes| attributes['instituicao'].blank? },
-                                                    allow_destroy: true
     accepts_nested_attributes_for :experiencias,
                                                     reject_if: proc { |attributes| attributes['empresa'].blank? },
                                                     allow_destroy: true
