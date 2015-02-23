@@ -25,25 +25,6 @@ ActiveRecord::Schema.define(version: 20150220181326) do
     t.datetime "foto_updated_at"
   end
 
-  create_table "escolaridades", force: :cascade do |t|
-    t.string   "instituicao"
-    t.integer  "curriculo_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  add_index "escolaridades", ["curriculo_id"], name: "index_escolaridades_on_curriculo_id"
-
-  create_table "experiencia", force: :cascade do |t|
-    t.string   "empresa"
-    t.string   "tempo"
-    t.integer  "curriculo_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  add_index "experiencia", ["curriculo_id"], name: "index_experiencia_on_curriculo_id"
-
   create_table "experiencias", force: :cascade do |t|
     t.string   "empresa"
     t.string   "tempo"

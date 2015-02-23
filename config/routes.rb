@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :curriculos
   resources :principal
 
-  root "curriculos#index"
+  root "principal#index"
 end

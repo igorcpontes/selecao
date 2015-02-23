@@ -1,24 +1,26 @@
 .main_content
     #recipe_top.row
-        .col-md-4
-            = image_tag @curriculo.foto.url(:medium), class: "recipe_image"
-        .col-md-8
-            #recipe_info
-                %h1= @curriculo.nome
-                %p.description= @curriculo.email
+        .row
+            .col-md-8
+                #recipe_info
+                    %h1= @curriculo.nome
+                    E-mail:
+                    %p.description= @curriculo.email
+                    = link_to "Voltar", root_path, class: "btn btn-default"
+                    - if user_signed_in?
+                        = link_to "Editar", edit_curriculo_path, class: "btn btn-default"
+                        = link_to "Deletar", curriculo_path, method: :delete, data: {confirm: "Tem certeza que deseja apagar este currículo?" }, class: "btn btn-default"
+                        = link_to "Entrevistar", edit_curriculo_path, class: "btn btn-default"
 
-    .row
-        .col-md-6
+            .col-md-4
             #experiencias
-                %h2 Experiência Profissional
+                %h2 Experiências
                 %ul
                     - @curriculo.experiencias.each do | experiencia |
-                        %li= experiencia.empresa
-                        %li= experiencia.tempo
-
-    .row
-        .col-md-12
-            = link_to "Voltar", root_path, class: "btn btn-default"
-            - if user_signed_in?
-                = link_to "Editar", edit_curriculo_path, class: "btn btn-default"
-                = link_to "Deletar", curriculo_path, method: :delete, data: {confirm: "Tem certeza que deseja apagar este currículo?" }, class: "btn btn-default"
+                        - if experiencia.tempo == ""
+                            %li= experiencia.empresa
+                        - else
+                            %li= experiencia.empresa + " - " + experiencia.tempo
+        .row
+            .col-md-4
+                = image_tag @curriculo.foto.url(:medium), class: "recipe_image"

@@ -11,6 +11,8 @@
         = f.input :nome, input_html: { class: 'form-control' }
         = f.input :email, input_html: { class: 'form-control' }
         = f.input :foto, input_html: { class: 'form-control' }
+        -#= f.input :nome, collection: @opcoes, input_html: { class: 'form-control' }
+        -#= f.collection_radio_buttons :nome, [[true, 'Yes'] ,[false, 'No']], :first, :last
 
         .row
             .col-md-6
