@@ -13,12 +13,16 @@
 
             - if user_signed_in?
                 %ul.nav.navbar-nav.navbar-right
-                    %li= link_to "Novo currículo", new_curriculo_path
-                    %li= link_to "Desconectar", destroy_user_session_path, method: :delete
+                    %li= link_to "Novo currículo", new_curriculo_path, class: "btn btn-default"
+                    %li= link_to "Administração", root_path, class: "btn btn-default"
+                    %li= link_to "Registrar", new_user_registration_path, class: "btn btn-default"
+                    %li= link_to "Desconectar", destroy_user_session_path, method: :delete, class: "btn btn-default"
             - else
                 %ul.nav.navbar-nav.navbar-right
-                    %li= link_to "Registrar", new_user_registration_path
-                    %li= link_to "Logar", new_user_session_path
+                    %li= link_to "Novo currículo", new_curriculo_path, class: "btn btn-default"
+                    %li= link_to "Administração", root_path, class: "btn btn-default"
+                    %li= link_to "Registrar", new_user_registration_path, class: "btn btn-default"
+                    -#%li= link_to "Logar", new_user_session_path
 
     .container
         - flash.each do |name, msg|
