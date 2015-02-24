@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220181326) do
+ActiveRecord::Schema.define(version: 20150224200735) do
 
   create_table "curriculos", force: :cascade do |t|
     t.string   "nome"
@@ -23,6 +23,44 @@ ActiveRecord::Schema.define(version: 20150220181326) do
     t.string   "foto_content_type"
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
+  end
+
+  create_table "entrevistas", force: :cascade do |t|
+    t.date     "data_nascimento"
+    t.string   "telefone"
+    t.string   "estado_civil"
+    t.string   "filhos"
+    t.integer  "quantos_filhos"
+    t.string   "mais_filhos"
+    t.string   "mora_com_quem"
+    t.string   "casa_propria"
+    t.string   "sustenta_casa"
+    t.string   "escolaridade"
+    t.string   "parou_estudar"
+    t.string   "problema_de_saude"
+    t.string   "alergia"
+    t.string   "ultimo_trabalho"
+    t.string   "funcao_ultimo_trabalho"
+    t.date     "entrada_ultimo_trabalho"
+    t.date     "saida_ultimo_trabalho"
+    t.string   "motivo_saida"
+    t.string   "colocou_empresa_justica"
+    t.string   "preferencia"
+    t.string   "bebe"
+    t.string   "fuma"
+    t.string   "religiao"
+    t.string   "setor_gostaria_ocupar"
+    t.string   "experiencia_area_pretendida"
+    t.string   "qualidade"
+    t.string   "defeito"
+    t.string   "disponibilidade_horario"
+    t.string   "meio_transporte"
+    t.text     "observacao"
+    t.string   "carteira_nacional_habilitacao"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "curriculo_id"
+    t.integer  "user_id"
   end
 
   create_table "experiencias", force: :cascade do |t|

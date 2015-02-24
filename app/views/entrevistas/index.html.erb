@@ -1,0 +1,87 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Entrevistas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data nascimento</th>
+      <th>Telefone</th>
+      <th>Estado civil</th>
+      <th>Filhos</th>
+      <th>Quantos filhos</th>
+      <th>Mais filhos</th>
+      <th>Mora com quem</th>
+      <th>Casa propria</th>
+      <th>Sustenta casa</th>
+      <th>Escolaridade</th>
+      <th>Parou estudar</th>
+      <th>Problema de saude</th>
+      <th>Alergia</th>
+      <th>Ultimo trabalho</th>
+      <th>Funcao ultimo trabalho</th>
+      <th>Entrada ultimo trabalho</th>
+      <th>Saida ultimo trabalho</th>
+      <th>Motivo saida</th>
+      <th>Colocou empresa justica</th>
+      <th>Preferencia</th>
+      <th>Bebe</th>
+      <th>Fuma</th>
+      <th>Religiao</th>
+      <th>Setor gostaria ocupar</th>
+      <th>Experiencia area pretendida</th>
+      <th>Qualidade</th>
+      <th>Defeito</th>
+      <th>Disponibilidade horario</th>
+      <th>Meio transporte</th>
+      <th>Observacao</th>
+      <th>Carteira nacional habilitacao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entrevistas.each do |entrevista| %>
+      <tr>
+        <td><%= entrevista.data_nascimento %></td>
+        <td><%= entrevista.telefone %></td>
+        <td><%= entrevista.estado_civil %></td>
+        <td><%= entrevista.filhos %></td>
+        <td><%= entrevista.quantos_filhos %></td>
+        <td><%= entrevista.mais_filhos %></td>
+        <td><%= entrevista.mora_com_quem %></td>
+        <td><%= entrevista.casa_propria %></td>
+        <td><%= entrevista.sustenta_casa %></td>
+        <td><%= entrevista.escolaridade %></td>
+        <td><%= entrevista.parou_estudar %></td>
+        <td><%= entrevista.problema_de_saude %></td>
+        <td><%= entrevista.alergia %></td>
+        <td><%= entrevista.ultimo_trabalho %></td>
+        <td><%= entrevista.funcao_ultimo_trabalho %></td>
+        <td><%= entrevista.entrada_ultimo_trabalho %></td>
+        <td><%= entrevista.saida_ultimo_trabalho %></td>
+        <td><%= entrevista.motivo_saida %></td>
+        <td><%= entrevista.colocou_empresa_justica %></td>
+        <td><%= entrevista.preferencia %></td>
+        <td><%= entrevista.bebe %></td>
+        <td><%= entrevista.fuma %></td>
+        <td><%= entrevista.religiao %></td>
+        <td><%= entrevista.setor_gostaria_ocupar %></td>
+        <td><%= entrevista.experiencia_area_pretendida %></td>
+        <td><%= entrevista.qualidade %></td>
+        <td><%= entrevista.defeito %></td>
+        <td><%= entrevista.disponibilidade_horario %></td>
+        <td><%= entrevista.meio_transporte %></td>
+        <td><%= entrevista.observacao %></td>
+        <td><%= entrevista.carteira_nacional_habilitacao %></td>
+        <td><%= link_to 'Show', entrevista %></td>
+        <td><%= link_to 'Edit', edit_entrevista_path(entrevista) %></td>
+        <td><%= link_to 'Destroy', entrevista, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entrevista', new_entrevista_path %>

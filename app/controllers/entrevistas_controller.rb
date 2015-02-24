@@ -1,0 +1,61 @@
+class EntrevistasController < ApplicationController
+  before_action :set_entrevista, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @entrevistas = Entrevista.all
+  end
+
+  def show
+  end
+
+  def new
+    @entrevista = Entrevista.new
+  end
+
+  def edit
+  end
+
+  def create
+    @entrevista = Entrevista.new(entrevista_params)
+    @entrevista.id_user = current_user.id
+    @entrevista.id_curriculo =
+
+    respond_to do |format|
+      if @entrevista.save
+        format.html { redirect_to @entrevista, notice: 'Entrevista cadastrada com sucesso.' }
+        format.json { render :show, status: :created, location: @entrevista }
+      else
+        format.html { render :new }
+        format.json { render json: @entrevista.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @entrevista.update(entrevista_params)
+        format.html { redirect_to @entrevista, notice: 'Entrevista atualizada com sucesso.' }
+        format.json { render :show, status: :ok, location: @entrevista }
+      else
+        format.html { render :edit }
+        format.json { render json: @entrevista.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    @entrevista.destroy
+    respond_to do |format|
+      format.html { redirect_to entrevistas_url, notice: 'Entrevista apagada com sucesso.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    def set_entrevista
+      @entrevista = Entrevista.find(params[:id])
+    end
+    def entrevista_params
+      params.require(:entrevista).permit(:data_nascimento, :telefone, :estado_civil, :filhos, :quantos_filhos, :mais_filhos, :mora_com_quem, :casa_propria, :sustenta_casa, :escolaridade, :parou_estudar, :problema_de_saude, :alergia, :ultimo_trabalho, :funcao_ultimo_trabalho, :entrada_ultimo_trabalho, :saida_ultimo_trabalho, :motivo_saida, :colocou_empresa_justica, :preferencia, :bebe, :fuma, :religiao, :setor_gostaria_ocupar, :experiencia_area_pretendida, :qualidade, :defeito, :disponibilidade_horario, :meio_transporte, :observacao, :carteira_nacional_habilitacao)
+    end
+end

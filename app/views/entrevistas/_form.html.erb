@@ -1,0 +1,141 @@
+<%= form_for(@entrevista) do |f| %>
+  <% if @entrevista.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entrevista.errors.count, "error") %> prohibited this entrevista from being saved:</h2>
+
+      <ul>
+      <% @entrevista.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data_nascimento %><br>
+    <%= f.date_select :data_nascimento %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone %><br>
+    <%= f.text_field :telefone %>
+  </div>
+  <div class="field">
+    <%= f.label :estado_civil %><br>
+    <%= f.text_field :estado_civil %>
+  </div>
+  <div class="field">
+    <%= f.label :filhos %><br>
+    <%= f.text_field :filhos %>
+  </div>
+  <div class="field">
+    <%= f.label :quantos_filhos %><br>
+    <%= f.number_field :quantos_filhos %>
+  </div>
+  <div class="field">
+    <%= f.label :mais_filhos %><br>
+    <%= f.text_field :mais_filhos %>
+  </div>
+  <div class="field">
+    <%= f.label :mora_com_quem %><br>
+    <%= f.text_field :mora_com_quem %>
+  </div>
+  <div class="field">
+    <%= f.label :casa_propria %><br>
+    <%= f.text_field :casa_propria %>
+  </div>
+  <div class="field">
+    <%= f.label :sustenta_casa %><br>
+    <%= f.text_field :sustenta_casa %>
+  </div>
+  <div class="field">
+    <%= f.label :escolaridade %><br>
+    <%= f.text_field :escolaridade %>
+  </div>
+  <div class="field">
+    <%= f.label :parou_estudar %><br>
+    <%= f.text_field :parou_estudar %>
+  </div>
+  <div class="field">
+    <%= f.label :problema_de_saude %><br>
+    <%= f.text_field :problema_de_saude %>
+  </div>
+  <div class="field">
+    <%= f.label :alergia %><br>
+    <%= f.text_field :alergia %>
+  </div>
+  <div class="field">
+    <%= f.label :ultimo_trabalho %><br>
+    <%= f.text_field :ultimo_trabalho %>
+  </div>
+  <div class="field">
+    <%= f.label :funcao_ultimo_trabalho %><br>
+    <%= f.text_field :funcao_ultimo_trabalho %>
+  </div>
+  <div class="field">
+    <%= f.label :entrada_ultimo_trabalho %><br>
+    <%= f.date_select :entrada_ultimo_trabalho %>
+  </div>
+  <div class="field">
+    <%= f.label :saida_ultimo_trabalho %><br>
+    <%= f.date_select :saida_ultimo_trabalho %>
+  </div>
+  <div class="field">
+    <%= f.label :motivo_saida %><br>
+    <%= f.text_field :motivo_saida %>
+  </div>
+  <div class="field">
+    <%= f.label :colocou_empresa_justica %><br>
+    <%= f.text_field :colocou_empresa_justica %>
+  </div>
+  <div class="field">
+    <%= f.label :preferencia %><br>
+    <%= f.text_field :preferencia %>
+  </div>
+  <div class="field">
+    <%= f.label :bebe %><br>
+    <%= f.text_field :bebe %>
+  </div>
+  <div class="field">
+    <%= f.label :fuma %><br>
+    <%= f.text_field :fuma %>
+  </div>
+  <div class="field">
+    <%= f.label :religiao %><br>
+    <%= f.text_field :religiao %>
+  </div>
+  <div class="field">
+    <%= f.label :setor_gostaria_ocupar %><br>
+    <%= f.text_field :setor_gostaria_ocupar %>
+  </div>
+  <div class="field">
+    <%= f.label :experiencia_area_pretendida %><br>
+    <%= f.text_field :experiencia_area_pretendida %>
+  </div>
+  <div class="field">
+    <%= f.label :qualidade %><br>
+    <%= f.text_field :qualidade %>
+  </div>
+  <div class="field">
+    <%= f.label :defeito %><br>
+    <%= f.text_field :defeito %>
+  </div>
+  <div class="field">
+    <%= f.label :disponibilidade_horario %><br>
+    <%= f.text_field :disponibilidade_horario %>
+  </div>
+  <div class="field">
+    <%= f.label :meio_transporte %><br>
+    <%= f.text_field :meio_transporte %>
+  </div>
+  <div class="field">
+    <%= f.label :observacao %><br>
+    <%= f.text_area :observacao %>
+  </div>
+  <div class="field">
+    <%= f.label :carteira_nacional_habilitacao %><br>
+    <%= f.text_field :carteira_nacional_habilitacao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,6 +1,7 @@
 class Curriculo < ActiveRecord::Base
 
     has_many :experiencias
+    has_many :entrevistas
 
     accepts_nested_attributes_for :experiencias,
                                                     reject_if: proc { |attributes| attributes['empresa'].blank? },

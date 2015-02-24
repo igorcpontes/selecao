@@ -1,0 +1,67 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data_nascimento: 2015-02-24
+  telefone: MyString
+  estado_civil: MyString
+  filhos: MyString
+  quantos_filhos: 1
+  mais_filhos: MyString
+  mora_com_quem: MyString
+  casa_propria: MyString
+  sustenta_casa: MyString
+  escolaridade: MyString
+  parou_estudar: MyString
+  problema_de_saude: MyString
+  alergia: MyString
+  ultimo_trabalho: MyString
+  funcao_ultimo_trabalho: MyString
+  entrada_ultimo_trabalho: 2015-02-24
+  saida_ultimo_trabalho: 2015-02-24
+  motivo_saida: MyString
+  colocou_empresa_justica: MyString
+  preferencia: MyString
+  bebe: MyString
+  fuma: MyString
+  religiao: MyString
+  setor_gostaria_ocupar: MyString
+  experiencia_area_pretendida: MyString
+  qualidade: MyString
+  defeito: MyString
+  disponibilidade_horario: MyString
+  meio_transporte: MyString
+  observacao: MyText
+  carteira_nacional_habilitacao: MyString
+
+two:
+  data_nascimento: 2015-02-24
+  telefone: MyString
+  estado_civil: MyString
+  filhos: MyString
+  quantos_filhos: 1
+  mais_filhos: MyString
+  mora_com_quem: MyString
+  casa_propria: MyString
+  sustenta_casa: MyString
+  escolaridade: MyString
+  parou_estudar: MyString
+  problema_de_saude: MyString
+  alergia: MyString
+  ultimo_trabalho: MyString
+  funcao_ultimo_trabalho: MyString
+  entrada_ultimo_trabalho: 2015-02-24
+  saida_ultimo_trabalho: 2015-02-24
+  motivo_saida: MyString
+  colocou_empresa_justica: MyString
+  preferencia: MyString
+  bebe: MyString
+  fuma: MyString
+  religiao: MyString
+  setor_gostaria_ocupar: MyString
+  experiencia_area_pretendida: MyString
+  qualidade: MyString
+  defeito: MyString
+  disponibilidade_horario: MyString
+  meio_transporte: MyString
+  observacao: MyText
+  carteira_nacional_habilitacao: MyString

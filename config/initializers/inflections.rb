@@ -16,4 +16,5 @@
 # end
 ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular "Experiencia", "Experiencias"
+  inflect.irregular "Entrevista", "Entrevistas"
 end
