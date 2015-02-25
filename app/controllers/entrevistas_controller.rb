@@ -1,12 +1,7 @@
 class EntrevistasController < ApplicationController
   before_action :set_entrevista, only: [:show, :edit, :update, :destroy]
-
-  def index
-    @entrevistas = Entrevista.all
-  end
-
-  def show
-  end
+  before_action :set_curriculo
+  before_action :authenticate_user!
 
   def new
     @entrevista = Entrevista.new
@@ -17,8 +12,8 @@ class EntrevistasController < ApplicationController
 
   def create
     @entrevista = Entrevista.new(entrevista_params)
-    @entrevista.id_user = current_user.id
-    @entrevista.id_curriculo =
+    @entrevista.user_id = current_user.id
+    @entrevista.curriculo_id = @movie.id
 
     respond_to do |format|
       if @entrevista.save
@@ -55,6 +50,11 @@ class EntrevistasController < ApplicationController
     def set_entrevista
       @entrevista = Entrevista.find(params[:id])
     end
+
+    def set_curriculo
+      @curriculo = Curriculo.find(params[:curriculo_id])
+    end
+
     def entrevista_params
       params.require(:entrevista).permit(:data_nascimento, :telefone, :estado_civil, :filhos, :quantos_filhos, :mais_filhos, :mora_com_quem, :casa_propria, :sustenta_casa, :escolaridade, :parou_estudar, :problema_de_saude, :alergia, :ultimo_trabalho, :funcao_ultimo_trabalho, :entrada_ultimo_trabalho, :saida_ultimo_trabalho, :motivo_saida, :colocou_empresa_justica, :preferencia, :bebe, :fuma, :religiao, :setor_gostaria_ocupar, :experiencia_area_pretendida, :qualidade, :defeito, :disponibilidade_horario, :meio_transporte, :observacao, :carteira_nacional_habilitacao)
     end
