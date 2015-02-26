@@ -12,128 +12,128 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :data_nascimento, "Data de nascimento:" %><br>
-    <%= f.date_select :data_nascimento %>
+    <%= f.label :data_nascimento, "Data de nascimento:" %>
+    <%= f.date_select :data_nascimento, :class => "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :telefone, "Telefone:"%><br>
-    <%= f.text_field :telefone %>
+    <%= f.label :telefone, "Telefone:"%>
+    <%= f.text_field :telefone, :id => "telefone" %>
   </div>
   <div class="field">
-    <%= f.label :estado_civil, "Estado civil:" %><br>
-    <%= f.text_field :estado_civil %>
+    <%= f.label :estado_civil, "Estado civil:" %>
+    <%= f.select :estado_civil, @estado_civil %>
   </div>
   <div class="field">
-    <%= f.label :filhos, "Tem filhos?" %><br>
-    <%= f.text_field :filhos %>
+    <%= f.label :filhos, "Tem filhos?" %>
+    <%= f.select :filhos, @sim_nao %>
   </div>
   <div class="field">
-    <%= f.label :quantos_filhos, "Quantos filhos?" %><br>
+    <%= f.label :quantos_filhos, "Quantos filhos?" %>
     <%= f.number_field :quantos_filhos %>
   </div>
   <div class="field">
-    <%= f.label :mais_filhos, "Pretende ter mais filhos?" %><br>
-    <%= f.text_field :mais_filhos %>
+    <%= f.label :mais_filhos, "Pretende ter mais filhos?" %>
+    <%= f.select :mais_filhos, @sim_nao %>
   </div>
   <div class="field">
-    <%= f.label :mora_com_quem, "Você mora com quem?" %><br>
-    <%= f.text_field :mora_com_quem %>
+    <%= f.label :mora_com_quem, "Você mora com quem?" %>
+    <%= f.text_field :mora_com_quem, :class => "body-75" %>
   </div>
   <div class="field">
-    <%= f.label :casa_propria, "Casa própria?" %><br>
-    <%= f.text_field :casa_propria %>
+    <%= f.label :casa_propria, "Casa própria?" %>
+    <%= f.select :casa_propria, @sim_nao %>
   </div>
   <div class="field">
-    <%= f.label :sustenta_casa, "Quem sustenta a casa?" %><br>
+    <%= f.label :sustenta_casa, "Quem sustenta a casa?" %>
     <%= f.text_field :sustenta_casa %>
   </div>
   <div class="field">
-    <%= f.label :escolaridade, "Escolaridade:" %><br>
-    <%= f.text_field :escolaridade %>
+    <%= f.label :escolaridade, "Escolaridade:" %>
+    <%= f.select :escolaridade, @escolaridade %>
   </div>
   <div class="field">
-    <%= f.label :parou_estudar, "Parou de estudar? Porquê?" %><br>
+    <%= f.label :parou_estudar, "Parou de estudar? Porquê?" %>
     <%= f.text_field :parou_estudar %>
   </div>
   <div class="field">
-    <%= f.label :problema_de_saude, "Tem algum problema de saúde? Qual?" %><br>
+    <%= f.label :problema_de_saude, "Tem algum problema de saúde? Qual?" %>
     <%= f.text_field :problema_de_saude %>
   </div>
   <div class="field">
-    <%= f.label :alergia, "Tem alergia a algum produto de limpeza?" %><br>
+    <%= f.label :alergia, "Tem alergia a algum produto de limpeza?" %>
     <%= f.text_field :alergia %>
   </div>
   <div class="field">
-    <%= f.label :ultimo_trabalho, "Qual foi o último local de trabalho?" %><br>
+    <%= f.label :ultimo_trabalho, "Qual foi o último local de trabalho?" %>
     <%= f.text_field :ultimo_trabalho %>
   </div>
   <div class="field">
-    <%= f.label :funcao_ultimo_trabalho, "Qual função exerceu no último trabalho?" %><br>
+    <%= f.label :funcao_ultimo_trabalho, "Qual função exerceu no último trabalho?" %>
     <%= f.text_field :funcao_ultimo_trabalho %>
   </div>
   <div class="field">
-    <%= f.label :entrada_ultimo_trabalho, "Data de entrada:" %><br>
+    <%= f.label :entrada_ultimo_trabalho, "Data de entrada:" %>
     <%= f.date_select :entrada_ultimo_trabalho %>
   </div>
   <div class="field">
-    <%= f.label :saida_ultimo_trabalho, "Data de saída:" %><br>
+    <%= f.label :saida_ultimo_trabalho, "Data de saída:" %>
     <%= f.date_select :saida_ultimo_trabalho %>
   </div>
   <div class="field">
-    <%= f.label :motivo_saida, "Qual o motivo da saída?" %><br>
+    <%= f.label :motivo_saida, "Qual o motivo da saída?" %>
     <%= f.text_field :motivo_saida %>
   </div>
   <div class="field">
-    <%= f.label :colocou_empresa_justica, "Já colocou alguma empresa na justiça? Porquê?" %><br>
+    <%= f.label :colocou_empresa_justica, "Já colocou alguma empresa na justiça? Porquê?" %>
     <%= f.text_field :colocou_empresa_justica %>
   </div>
   <div class="field">
-    <%= f.label :preferencia, "Você prefere?" %><br>
-    <%= f.text_field :preferencia %>
+    <%= f.label :preferencia, "Você prefere?" %>
+    <%= f.select :preferencia, @preferencia_trabalho %>
   </div>
   <div class="field">
-    <%= f.label :bebe, "Consome bebida alcoólica?" %><br>
-    <%= f.text_field :bebe %>
+    <%= f.label :bebe, "Consome bebida alcoólica?" %>
+    <%= f.select :bebe, @sim_nao_bebida %>
   </div>
   <div class="field">
-    <%= f.label :fuma, "Você fuma?" %><br>
-    <%= f.text_field :fuma %>
+    <%= f.label :fuma, "Você fuma?" %>
+    <%= f.select :fuma , @sim_nao %>
   </div>
   <div class="field">
-    <%= f.label :religiao, "Tem religião? Qual?" %><br>
+    <%= f.label :religiao, "Tem religião? Qual?" %>
     <%= f.text_field :religiao %>
   </div>
   <div class="field">
-    <%= f.label :setor_gostaria_ocupar, "Setor que gostaria de ocupar?" %><br>
-    <%= f.text_field :setor_gostaria_ocupar %>
+    <%= f.label :setor_gostaria_ocupar, "Setor que gostaria de ocupar?" %>
+    <%= f.select :setor_gostaria_ocupar, @cargo_ocupar %>
   </div>
   <div class="field">
-    <%= f.label :experiencia_area_pretendida, "Tem experiência na área pretendida?" %><br>
-    <%= f.text_field :experiencia_area_pretendida %>
+    <%= f.label :experiencia_area_pretendida, "Tem experiência na área pretendida?" %>
+    <%= f.select :experiencia_area_pretendida , @sim_nao %>
   </div>
   <div class="field">
-    <%= f.label :qualidade, "Qualidade:" %><br>
+    <%= f.label :qualidade, "Qualidade:" %>
     <%= f.text_field :qualidade %>
   </div>
   <div class="field">
-    <%= f.label :defeito, "Defeito:" %><br>
+    <%= f.label :defeito, "Defeito:" %>
     <%= f.text_field :defeito %>
   </div>
   <div class="field">
-    <%= f.label :disponibilidade_horario, "Você pode trabalhar em qual horário?" %><br>
-    <%= f.text_field :disponibilidade_horario %>
+    <%= f.label :disponibilidade_horario, "Você pode trabalhar em qual horário?" %>
+    <%= f.select :disponibilidade_horario , @horario_preferencial %>
   </div>
   <div class="field">
-    <%= f.label :meio_transporte, "Qual seu meio de transporte?" %><br>
-    <%= f.text_field :meio_transporte %>
+    <%= f.label :meio_transporte, "Qual seu meio de transporte?" %>
+    <%= f.select :meio_transporte , @tipo_transporte %>
   </div>
   <div class="field">
-    <%= f.label :observacao, "Observação:" %><br>
-    <%= f.text_area :observacao %>
+    <%= f.label :observacao, "Observação:" %>
+    <%= f.text_area :observacao, :size => "120x3" %>
   </div>
   <div class="field">
-    <%= f.label :carteira_nacional_habilitacao %><br>
-    <%= f.text_field :carteira_nacional_habilitacao %>
+    <%= f.label :carteira_nacional_habilitacao %>
+    <%= f.select :carteira_nacional_habilitacao , @sim_nao %>
   </div>
   <div class="actions">
     <%= f.submit %>

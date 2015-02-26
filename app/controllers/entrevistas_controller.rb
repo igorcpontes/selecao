@@ -5,6 +5,14 @@ class EntrevistasController < ApplicationController
 
   def new
     @entrevista = Entrevista.new
+    @sim_nao = GlobalConstants::SIM_NAO
+    @sim_nao_bebida = GlobalConstants::SIM_NAO_BEBIDA
+    @estado_civil = GlobalConstants::ESTADO_CIVIL
+    @escolaridade = GlobalConstants::ESCOLARIDADE
+    @preferencia_trabalho = GlobalConstants::PREFERENCIA_TRABALHO
+    @cargo_ocupar = GlobalConstants::CARGO_OCUPAR
+    @horario_preferencial = GlobalConstants::HORARIO_PREFERENCIAL
+    @tipo_transporte = GlobalConstants::TIPO_TRANSPORTE
   end
 
   def edit

@@ -11,7 +11,7 @@ class CurriculosController < ApplicationController
 
     def new
         @curriculo = Curriculo.new
-        @opcoes = {"teste1" => "1","teste2" => "2"}
+        @simnao = SIMNAO
     end
 
     def create
