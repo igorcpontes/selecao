@@ -18,6 +18,7 @@ gem 'paperclip', '~> 4.2.1'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'cocoon', '~> 1.2.6'
 gem 'devise', '~> 3.4.1'
+gem 'rails_admin', '~> 0.6.6'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

@@ -11,7 +11,6 @@ class CurriculosController < ApplicationController
 
     def new
         @curriculo = Curriculo.new
-        @simnao = SIMNAO
     end
 
     def create
@@ -48,5 +47,6 @@ class CurriculosController < ApplicationController
 
     def find_curriculo
         @curriculo = Curriculo.find(params[:id])
+        @entrevistas = Entrevista.all
     end
 end

@@ -18,15 +18,18 @@ class EntrevistasController < ApplicationController
   def edit
   end
 
+  def show
+  end
+
   def create
     @entrevista = Entrevista.new(entrevista_params)
     @entrevista.user_id = current_user.id
-    @entrevista.curriculo_id = @movie.id
+    @entrevista.curriculo_id = @curriculo.id
 
     respond_to do |format|
       if @entrevista.save
-        format.html { redirect_to @entrevista, notice: 'Entrevista cadastrada com sucesso.' }
-        format.json { render :show, status: :created, location: @entrevista }
+        format.html { redirect_to @curriculo, notice: 'Entrevista cadastrada com sucesso.' }
+        format.json { render :show, status: :created, location: @curriculo }
       else
         format.html { render :new }
         format.json { render json: @entrevista.errors, status: :unprocessable_entity }

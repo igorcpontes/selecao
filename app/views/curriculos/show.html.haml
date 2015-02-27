@@ -10,7 +10,7 @@
                     - if user_signed_in?
                         = link_to "Editar", edit_curriculo_path, class: "btn btn-default"
                         = link_to "Deletar", curriculo_path, method: :delete, data: {confirm: "Tem certeza que deseja apagar este currículo?" }, class: "btn btn-default"
-                        = link_to "Entrevistar", edit_curriculo_path, class: "btn btn-default"
+                        = link_to "Entrevistar", new_curriculo_entrevista_path(@curriculo), class: "btn btn-default"
 
             .col-md-4
             #experiencias
@@ -22,5 +22,15 @@
                         - else
                             %li= experiencia.empresa + " - " + experiencia.tempo
         .row
-            .col-md-4
-                = image_tag @curriculo.foto.url(:medium), class: "recipe_image"
+            #recipe_info
+                .col-md-4
+                    = image_tag @curriculo.foto.url(:medium), class: "recipe_image"
+                .col-md-8
+                    %h2 Entrevistas
+                    %ul
+                        - if @entrevistas.blank?
+                            %p Nenhuma entrevista cadastrada.
+                        - else
+                            - @entrevistas.each do | entrevista |
+                                %li= entrevista.user.email
+                                %li= entrevista.created_at

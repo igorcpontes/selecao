@@ -12,6 +12,9 @@
   <% end %>
 
   <div class="field">
+    <h3>Nome: <%= @curriculo.nome %></h3>
+  </div>
+  <div class="field">
     <%= f.label :data_nascimento, "Data de nascimento:" %>
     <%= f.date_select :data_nascimento, :class => "form-control" %>
   </div>
